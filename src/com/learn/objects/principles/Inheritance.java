@@ -11,6 +11,8 @@ public class Inheritance {
         /*make sure that when us access values it's in print statement or with a variable */
 
         System.out.println(Living.totalCreates);
+        /*as the human is an instance of Living it has all the properties of it. like totalCreates*/
+        System.out.println(Human.totalCreates);
     }
 }
 
