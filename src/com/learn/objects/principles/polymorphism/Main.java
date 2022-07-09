@@ -1,7 +1,5 @@
 package com.learn.objects.principles.polymorphism;
 
-import java.awt.*;
-
 public class Main {
     public static void main(String[] args) {
         Shapes shapes = new Shapes();
@@ -21,6 +19,7 @@ public class Main {
         // ? SO AS THE VALUES THAT CAN BE ACCESSED DEPENDS UPON THE TYPE, SO EVEN IF THE CLASS IS HAVING THE PROPERTIES
         Shapes AllSquares = new Square();
         //AllSquares.allTotal();
+        System.out.println(AllSquares);
         //? as the allTotal is not a method of Shapes it not been accessable by ALlSquares.
         Square onSquares  = new Square();
         onSquares.allTotal(); // can be accessed by them.
