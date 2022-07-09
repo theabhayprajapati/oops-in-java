@@ -21,7 +21,7 @@ public class Main {
         Shapes AllSquares = new Square();
         //AllSquares.allTotal();
         System.out.println(AllSquares);
-        //? as the allTotal is not a method of Shapes it not been accessable by ALlSquares.
+        //? as the allTotal is not a method of Shapes it not been accessible by ALlSquares.
         Square onSquares  = new Square();
         onSquares.allTotal(); // can be accessed by them.
         System.out.println(square);
