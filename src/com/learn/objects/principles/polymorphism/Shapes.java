@@ -11,4 +11,9 @@ public class Shapes {
     Shapes(){
         total++;
     }
+
+    @Override
+    public String toString(){
+        return "I have overridden toString";
+    }
 }

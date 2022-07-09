@@ -9,6 +9,7 @@ public class Main {
         Square square = new Square();
         square.area();
         square.total();
+
         /*METHOD OVERRIDING...*/
         /*  when the type of parent clas but the object is child class*/
         /*Parent obj = new Child()*/
@@ -23,7 +24,7 @@ public class Main {
         //? as the allTotal is not a method of Shapes it not been accessable by ALlSquares.
         Square onSquares  = new Square();
         onSquares.allTotal(); // can be accessed by them.
-
+        System.out.println(square);
     }
 
 }
