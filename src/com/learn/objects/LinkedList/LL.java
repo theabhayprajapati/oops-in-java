@@ -15,6 +15,9 @@ public class LL {
     private Node head;
     private Node tail;
     private int size;
+    LL(){
+        this.size =0;
+    }
     public void inserthead(int value){
         Node node = new Node(value);
         node.next = head;
@@ -49,13 +52,36 @@ public class LL {
     public void insert(int index, int value){
         if(index==0){
             inserthead(value);
+            return;
         }
-        Node last =head;
-        for(int i = 0; i<index -2; i++){
-            last =head.next;
+        if(index==size){
+            inserTail(value);
+            return;
         }
-        last.next= new Node(value, last.next);
-        size++;
+        Node temp =head;
+        for(int i=1; i<index;i++){
+            temp=temp.next;
+        }
+        Node node = new Node(value, temp.next);
+        temp.next=node;
     }
-
+    public void delete(int index){
+        if(index==0){
+            head=null;
+        }
+        if(size==1){
+            head=null;
+            return;
+        }
+        if(head==null){
+            tail=null;
+            return;
+        }
+        Node last=head;
+        for(int i=1;i<index;i++){
+            last = last.next;
+        }
+        Node temp = last.next;
+        last.next=temp.next;
+    }
 }
