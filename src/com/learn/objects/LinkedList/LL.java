@@ -68,13 +68,17 @@ public class LL {
     public void delete(int index){
         if(index==0){
             head=null;
+            size--;
+            return;
         }
         if(size==1){
             head=null;
+            size--;
             return;
         }
         if(head==null){
             tail=null;
+            size--;
             return;
         }
         Node last=head;
@@ -83,5 +87,6 @@ public class LL {
         }
         Node temp = last.next;
         last.next=temp.next;
+        size--;
     }
 }
