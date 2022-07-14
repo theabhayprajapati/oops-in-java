@@ -112,4 +112,20 @@ public class DLL {
         head = head.next;
         size--;
     }
+    public void getValue(int index){
+        if(index==0){
+            getHead();
+            return;
+        }
+        if(index==size-1){
+            getTail();
+            return;
+        }
+        Node last =head;
+        for(int i=1; i<=index;i++){
+            last= last.next;
+        }
+        System.out.println(last.value);
+    }
+
 }

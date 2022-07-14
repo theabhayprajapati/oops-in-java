@@ -50,5 +50,6 @@ public class Main {
         doubleList.display();
         doubleList.delete(0);
         doubleList.display();
+        doubleList.getValue(1);
     }
 }
