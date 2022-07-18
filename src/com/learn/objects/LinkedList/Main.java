@@ -2,7 +2,7 @@ package com.learn.objects.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        LL list = new LL();
+      /*  LL list = new LL();
         list.inserthead(12);
         System.out.println(list.getSize());
 
@@ -21,8 +21,8 @@ public class Main {
         list.display();
         list.delete(0);
         list.display();
-        System.out.println(list.getSize());
-
+        System.out.println(list.getSize());*/
+/*
         // DOUBLE LINKED LIST;
         DLL doubleList = new DLL();
         doubleList.insertHead(12);
@@ -51,5 +51,21 @@ public class Main {
         doubleList.delete(0);
         doubleList.display();
         doubleList.getValue(1);
+        */
+        LL list = new LL();
+        list.inserthead(5);
+        list.inserthead(4);
+        list.inserthead(3);
+        list.inserthead(2);
+        list.inserthead(1);
+        list.insertRec(2, 12);
+        list.display();
+        list.insertRec(3, 23);
+        list.display();
+        list.insertRec(3, 54);
+        list.insert(0, 123);
+        list.display();
+
     }
 }
+

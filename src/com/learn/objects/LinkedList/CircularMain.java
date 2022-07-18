@@ -9,7 +9,6 @@ public class CircularMain {
         list.insertTail(3);
         list.getSize();
         list.display();
-        //
         list.insert(3,20);
         list.display();
     }

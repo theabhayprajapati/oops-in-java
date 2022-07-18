@@ -4,14 +4,12 @@ public class CLL {
     private class Node{
         private int value;
         private Node next;
-        private Node previous;
         Node(int value){
             this.value = value;
         }
-        Node(int value, Node next, Node prev) {
+        Node(int value, Node next) {
             this.value = value;
             this.next = next;
-            this.previous = prev;
         }
     }
     private Node head;
@@ -22,30 +20,35 @@ public class CLL {
     }
     public void insertHead(int value){
         if(size==0){
-            head= new Node(value, null, null);
+            head= new Node(value, null);
             tail=head;
         }else {
-            Node newHead = new Node(value, head,null);
-            head.previous =newHead;
+            Node newHead = new Node(value, head);
             head=newHead;
         }
         size++;
     }
     public void insertTail(int value){
-        Node newTail = new Node(value, null, tail);
+        Node newTail = new Node(value, null);
         tail.next =newTail;
         tail=newTail;
+        tail.next =head;
     }
     public void getSize(){
         System.out.println(size);
     }
     public void display(){
         Node temp = head;
-        while(temp != null){
-            System.out.print(temp.value + " -> ");
-            temp=temp.next;
+        if(head!=null){
+            // circular linked list
+            while(temp!=null){
+                System.out.print(temp.value+ " -> ");
+                temp = temp.next;
+                if(temp ==head){
+                    break;
+                }
+            }
         }
-        System.out.println(" END ");
     }
     public void insert(int index, int value){
         if(index==0){
@@ -60,7 +63,19 @@ public class CLL {
         for(int i = 1; i<index; i++){
             temp= temp.next;
         }
-        temp.next= new Node(value, temp.next,temp);
+        temp.next= new Node(value, temp.next);
         size++;
     }
+    public void insertRec(int index, int value){
+        Rec(index, head, value);
+    }
+    private void Rec(int index, Node head, int value){
+        if(index==1){
+            Node newNode= new Node(value, head.next);
+            head.next= newNode;
+        }else{
+            Rec(index- 1, head, value);
+        }
+    }
+
 }
