@@ -55,6 +55,7 @@ public class CustomArrayList {
             }
         }
         sb.append("]");
+        System.out.println(sb.toString());
         return sb.toString();
     }
 
@@ -75,13 +76,10 @@ public class CustomArrayList {
         list.add(11);
         list.add(12);
         list.add(13);
-        //print
         System.out.println(list);
         System.out.println(list.size());
         ArrayList<Integer> list2 = new ArrayList<>(10);
         //!  <Integer>: adding type in <braces> is called as GENERICS
-
-
     }
 
 }
